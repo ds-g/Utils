@@ -1,5 +1,3 @@
-// Internet radio interface for ffplay.
-
 #include <iostream>
 #include <iomanip>
 
@@ -8,12 +6,12 @@ using namespace std;
 int main ()
 {
     int x;
-    cout << "Radio select..\n";
-    cout << "1: CLASSIX = http://5.79.70.19:80/2\n";
-    cout << "2: FMMAIN = http://5.79.70.19:80/1\n";
-    cout << "3: THE DREAM = http://5.79.70.19:80/4\n";
-    cout << "4: THE GARDEN = http://5.79.70.19:80/5\n";
-    cout << "Please enter the corresponding number.. ";
+    cout << "1: CLASSIX [https://www.intergalactic.fm/]\n";
+    cout << "2: FMMAIN [https://www.intergalactic.fm/]\n";
+    cout << "3: THE DREAM [https://www.intergalactic.fm/]\n";
+    cout << "4: THE GARDEN [https://www.intergalactic.fm/]\n";
+    cout << "5: BASS DRIVE [http://www.bassdrive.com/]\n";
+    cout << "..: ";
     cin >> x;
     switch (x)
     {
@@ -25,6 +23,7 @@ int main ()
                  break;
         case 4 : system("ffplay -nodisp http://5.79.70.19:80/5");
                  break;
+        case 5:  system("ffplay -nodisp http://us-tx1.streams.bassdrive.com:9000");
         default: cout << "Exiting..\n";
                  break;     
     }
